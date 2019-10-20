@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(to right top, #8904cf, #7a07ce, #6a0bcc, #570fcb, #4112c9);
+    font-family: 'Merriweather', serif;
+    color: whitesmoke;
+    font-size: 40px;
 }
 
 .star {
@@ -16,6 +21,20 @@ body {
     height: 3px;
     background: red;
     border-radius: 1px;
+    z-index: -1;
+}
+
+.title {
+    color: whitesmoke;
+    font-size: 130px;
+    margin-top: 20px;
+    user-select: none;
+}
+
+p {
+    margin: 0;
+    user-select: none;
+    letter-spacing: 10px;
 }
 
 .batman img {
@@ -23,6 +42,28 @@ body {
     transform: rotate(80deg);
     animation: myMove 5s infinite linear;
     position: absolute;
+    top: 60%;
+}
+
+button {
+    border-style: none;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    background: #8904cf;
+    transition: .3s all;
+    cursor: pointer;
+    outline: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #4112c9;
+    color: whitesmoke;
+}
+
+button:active {
+    transform: translate(-10px, 10px);
 }
 
 @keyframes myMove {
