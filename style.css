@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right top, #8904cf, #7a07ce, #6a0bcc, #570fcb, #4112c9);
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: red;
+    border-radius: 1px;
+}
+
+.batman img {
+    width: 200px;
+    transform: rotate(80deg);
+    animation: myMove 5s infinite linear;
+    position: absolute;
+}
+
+@keyframes myMove {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%;
+    }
+}
